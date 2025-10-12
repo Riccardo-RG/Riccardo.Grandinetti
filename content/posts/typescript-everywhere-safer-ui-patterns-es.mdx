@@ -1,0 +1,99 @@
+---
+title: "TypeScript en todas partes: patrones de UI más seguros en Next.js"
+date: "2024-01-10"
+summary: "Explorando patrones avanzados de TypeScript que hacen tus aplicaciones Next.js más robustas y mantenibles."
+tags: ["TypeScript", "Next.js", "Patrones"]
+lang: "es"
+---
+
+# TypeScript en todas partes: patrones de UI más seguros en Next.js
+
+TypeScript se ha convertido en una herramienta esencial para construir aplicaciones frontend robustas. En este post, compartiré algunos patrones avanzados que uso para hacer las aplicaciones Next.js más type-safe y mantenibles.
+
+## El Poder del TypeScript Estricto
+
+Primero, hablemos sobre la configuración de TypeScript. Siempre empiezo con el modo estricto habilitado:
+
+```json
+{
+  "compilerOptions": {
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true
+  }
+}
+```
+
+## Patrón 1: Rutas API Type-Safe
+
+Uno de mis patrones favoritos es crear rutas API type-safe:
+
+```typescript
+// types/api.ts
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+}
+
+export interface ApiResponse<T> {
+  data: T;
+  error?: string;
+}
+
+// lib/api.ts
+export async function fetchUser(id: string): Promise<ApiResponse<User>> {
+  const response = await fetch(`/api/users/${id}`);
+  return response.json();
+}
+```
+
+## Patrón 2: Props de Componentes con Variantes
+
+Usar `class-variance-authority` con TypeScript crea APIs de componentes poderosas y type-safe:
+
+```typescript
+import { cva, type VariantProps } from "class-variance-authority";
+
+const buttonVariants = cva("button", {
+  variants: {
+    variant: {
+      primary: "bg-blue-500 text-white",
+      secondary: "bg-gray-200 text-gray-900",
+    },
+    size: {
+      sm: "px-2 py-1 text-sm",
+      lg: "px-4 py-2 text-lg",
+    },
+  },
+});
+
+interface ButtonProps extends VariantProps<typeof buttonVariants> {
+  children: React.ReactNode;
+}
+```
+
+## Patrón 3: Manejo de Formularios con Zod
+
+Combinando TypeScript con Zod para validación de formularios:
+
+```typescript
+import { z } from "zod";
+
+const userSchema = z.object({
+  name: z.string().min(1, "Nombre requerido"),
+  email: z.string().email("Email inválido"),
+  age: z.number().min(18, "Debes tener al menos 18 años"),
+});
+
+type UserFormData = z.infer<typeof userSchema>;
+```
+
+## Puntos Clave
+
+1. **Empieza con TypeScript estricto** - Captura más errores en tiempo de compilación
+2. **Usa uniones discriminadas** - Hacen imposibles los estados imposibles
+3. **Aprovecha los tipos de utilidad** - `Pick`, `Omit`, y `Partial` son tus amigos
+4. **Tipifica las respuestas de API** - La seguridad de tipos end-to-end vale el esfuerzo
+
+TypeScript no es solo para capturar bugs—es para crear mejores experiencias de desarrollador y bases de código más mantenibles.

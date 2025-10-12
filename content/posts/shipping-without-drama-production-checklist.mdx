@@ -1,0 +1,92 @@
+---
+title: "Shipping without drama: my checklist before production"
+date: "2024-01-05"
+summary: "A comprehensive checklist I use before every production deployment to ensure smooth, drama-free releases."
+tags: ["Deployment", "DevOps", "Best Practices"]
+lang: "en"
+---
+
+# Shipping without drama: my checklist before production
+
+After years of both smooth deployments and late-night emergency fixes, I've developed a comprehensive pre-production checklist that has dramatically reduced deployment stress and post-release issues.
+
+## Pre-Deployment Checklist
+
+### Code Quality
+- All tests passing (unit, integration, e2e)
+- Code coverage above 80%
+- No TypeScript errors or warnings
+- ESLint and Prettier checks pass
+- Security audit completed (`npm audit`)
+
+### Performance
+- Lighthouse score > 90 on mobile
+- Bundle size analysis completed
+- Core Web Vitals within targets
+- Images optimized and properly sized
+- Unused code removed
+
+```bash
+# Performance check script
+npm run build
+npm run analyze
+lighthouse --mobile --chrome-flags="--headless" http://localhost:3000
+```
+
+### Accessibility
+- Screen reader testing completed
+- Keyboard navigation works
+- Color contrast ratios meet WCAG AA
+- Alt text for all images
+- Proper heading hierarchy
+
+### SEO & Meta
+- Meta descriptions and titles optimized
+- Open Graph tags configured
+- Sitemap updated
+- Robots.txt configured
+- Canonical URLs set
+
+### Monitoring & Analytics
+- Error tracking configured (Sentry)
+- Analytics tracking verified
+- Performance monitoring active
+- Uptime monitoring configured
+- Log aggregation working
+
+## Deployment Process
+
+### Pre-Deploy
+1. **Feature freeze** - No new features 24h before deploy
+2. **Staging verification** - Full QA pass on staging
+3. **Database backup** - Always backup before migrations
+4. **Team notification** - Alert team of upcoming deployment
+
+### During Deploy
+1. **Monitor metrics** - Watch error rates and performance
+2. **Smoke tests** - Verify critical paths work
+3. **Rollback plan** - Have one-click rollback ready
+4. **Communication** - Keep stakeholders informed
+
+### Post-Deploy
+1. **Health checks** - Verify all systems operational
+2. **Monitor for 30 minutes** - Watch for any issues
+3. **User acceptance** - Get stakeholder sign-off
+4. **Documentation** - Update deployment notes
+
+## Emergency Procedures
+
+Always have these ready:
+- One-click rollback procedure
+- Emergency contact list
+- Incident response playbook
+- Communication templates
+
+## Key Takeaways
+
+1. **Checklists prevent mistakes** - Even experienced developers miss things
+2. **Automate what you can** - But verify automation works
+3. **Monitor everything** - You can't fix what you can't see
+4. **Plan for failure** - Have rollback and recovery procedures ready
+
+This checklist has saved me countless hours of debugging and emergency fixes. Adapt it to your specific needs, but don't skip the fundamentals.

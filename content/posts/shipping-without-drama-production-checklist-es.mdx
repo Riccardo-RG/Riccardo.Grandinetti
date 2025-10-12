@@ -1,0 +1,92 @@
+---
+title: "Lanzar sin drama: mi checklist antes de producción"
+date: "2024-01-05"
+summary: "Una lista de verificación completa que uso antes de cada despliegue en producción para asegurar lanzamientos fluidos y sin drama."
+tags: ["Deployment", "DevOps", "Mejores Prácticas"]
+lang: "es"
+---
+
+# Lanzar sin drama: mi checklist antes de producción
+
+Después de años de despliegues tanto fluidos como de arreglos de emergencia nocturnos, he desarrollado una lista de verificación pre-producción completa que ha reducido dramáticamente el estrés del despliegue y los problemas post-lanzamiento.
+
+## Lista de Verificación Pre-Despliegue
+
+### Calidad del Código
+- Todas las pruebas pasan (unit, integration, e2e)
+- Cobertura de código por encima del 80%
+- Sin errores o warnings de TypeScript
+- Verificaciones ESLint y Prettier pasan
+- Auditoría de seguridad completada (`npm audit`)
+
+### Rendimiento
+- Puntuación Lighthouse > 90 en móvil
+- Análisis de tamaño de bundle completado
+- Core Web Vitals dentro de objetivos
+- Imágenes optimizadas y dimensionadas correctamente
+- Código no utilizado removido
+
+```bash
+# Script de verificación de rendimiento
+npm run build
+npm run analyze
+lighthouse --mobile --chrome-flags="--headless" http://localhost:3000
+```
+
+### Accesibilidad
+- Pruebas de lector de pantalla completadas
+- Navegación por teclado funciona
+- Ratios de contraste de color cumplen WCAG AA
+- Texto alt para todas las imágenes
+- Jerarquía de encabezados correcta
+
+### SEO & Meta
+- Meta descripciones y títulos optimizados
+- Etiquetas Open Graph configuradas
+- Sitemap actualizado
+- Robots.txt configurado
+- URLs canónicas establecidas
+
+### Monitoreo & Analytics
+- Seguimiento de errores configurado (Sentry)
+- Seguimiento de analytics verificado
+- Monitoreo de rendimiento activo
+- Monitoreo de uptime configurado
+- Agregación de logs funcionando
+
+## Proceso de Despliegue
+
+### Pre-Despliegue
+1. **Congelación de features** - Sin nuevas características 24h antes del despliegue
+2. **Verificación de staging** - QA completo en staging
+3. **Respaldo de base de datos** - Siempre respaldar antes de migraciones
+4. **Notificación del equipo** - Alertar al equipo del despliegue próximo
+
+### Durante el Despliegue
+1. **Monitorear métricas** - Observar tasas de error y rendimiento
+2. **Pruebas de humo** - Verificar que las rutas críticas funcionen
+3. **Plan de rollback** - Tener rollback de un clic listo
+4. **Comunicación** - Mantener informados a los stakeholders
+
+### Post-Despliegue
+1. **Verificaciones de salud** - Verificar que todos los sistemas estén operativos
+2. **Monitorear por 30 minutos** - Observar cualquier problema
+3. **Aceptación del usuario** - Obtener aprobación de stakeholders
+4. **Documentación** - Actualizar notas de despliegue
+
+## Procedimientos de Emergencia
+
+Siempre ten listos:
+- Procedimiento de rollback de un clic
+- Lista de contactos de emergencia
+- Manual de respuesta a incidentes
+- Plantillas de comunicación
+
+## Puntos Clave
+
+1. **Las listas de verificación previenen errores** - Incluso los desarrolladores experimentados olvidan cosas
+2. **Automatiza lo que puedas** - Pero verifica que la automatización funcione
+3. **Monitorea todo** - No puedes arreglar lo que no puedes ver
+4. **Planifica para el fallo** - Ten procedimientos de rollback y recuperación listos
+
+Esta lista de verificación me ha ahorrado incontables horas de debugging y arreglos de emergencia. Adáptala a tus necesidades específicas, pero no omitas los fundamentos.

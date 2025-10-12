@@ -1,0 +1,196 @@
+{
+  "navigation": {
+    "home": "Home",
+    "blog": "Blog",
+    "projects": "Progetti"
+  },
+  "hero": {
+    "name": "Il Tuo Nome",
+    "role": "Senior Frontend Engineer (React/TypeScript, Next.js)",
+    "tagline": "Costruisco front-end affidabili e sereni, guidato dalla passione per la tecnologia.",
+    "cta": {
+      "contact": "Contatti",
+      "blog": "Blog",
+      "downloadCV": "Scarica CV (PDF, provvisorio)",
+      "downloadCVText": "Scarica CV"
+    }
+  },
+  "presentation": {
+    "title": "La Mia Lettera di Presentazione",
+    "subtitle": "Chi sono e cosa mi guida nel mio lavoro",
+    "paragraph1": "Ciao! Sono un Frontend Engineer appassionato con oltre 5 anni di esperienza nel creare applicazioni web moderne e performanti. La mia filosofia si basa sulla convinzione che la tecnologia debba essere al servizio delle persone, creando esperienze digitali intuitive e accessibili.",
+    "paragraph2": "Nel mio percorso professionale, ho avuto l'opportunità di lavorare con team diversi e progetti stimolanti, sempre con l'obiettivo di scrivere codice pulito, manutenibile e scalabile. Credo fermamente nell'importanza della collaborazione e del continuous learning - ogni giorno è un'opportunità per migliorare e imparare qualcosa di nuovo.",
+    "paragraph3": "Quello che mi motiva di più è la possibilità di trasformare idee complesse in soluzioni semplici ed eleganti. Amo affrontare sfide tecniche impegnative e trovare il giusto equilibrio tra innovazione e pragmatismo, sempre mantenendo al centro l'esperienza dell'utente finale.",
+    "signature": "Con passione e dedizione,",
+    "role": "Senior Frontend Engineer"
+  },
+  "techStack": {
+    "title": "Il Mio Stack Tecnologico",
+    "description": "Le tecnologie e gli strumenti che utilizzo quotidianamente per creare esperienze web eccezionali",
+    "footer": "Sempre in continuo aggiornamento e apprendimento di nuove tecnologie",
+    "hoverInstruction": {
+      "desktop": "Passa il mouse su una tecnologia per vedere i progetti",
+      "mobile": "Tocca una tecnologia per vedere i progetti"
+    },
+    "projects": {
+      "react": {
+        "ecommerce": {
+          "name": "Piattaforma E-commerce",
+          "description": "Piattaforma di e-commerce completa con carrello, pagamenti e gestione ordini",
+          "usage": "Utilizzato per creare componenti riutilizzabili e gestire lo stato dell'applicazione",
+          "impact": "Ridotto il tempo di sviluppo del 40% grazie ai componenti modulari"
+        },
+        "dashboard": {
+          "name": "Dashboard Analytics",
+          "description": "Dashboard per visualizzazione dati e analytics in tempo reale",
+          "usage": "Implementato hooks personalizzati per la gestione dei dati e ottimizzazione delle performance",
+          "impact": "Migliorato le performance di rendering del 60%"
+        }
+      },
+      "typescript": {
+        "banking": {
+          "name": "Applicazione Bancaria",
+          "description": "Applicazione bancaria con gestione conti e transazioni",
+          "usage": "Implementato type safety completo e interfacce robuste per API",
+          "impact": "Ridotto i bug in produzione del 75%"
+        }
+      },
+      "nextjs": {
+        "corporate": {
+          "name": "Sito Web Aziendale",
+          "description": "Sito web aziendale con blog e sezione progetti",
+          "usage": "Utilizzato SSR e SSG per ottimizzare SEO e performance",
+          "impact": "Migliorato il Core Web Vitals score del 85%"
+        }
+      },
+      "tailwind": {
+        "designSystem": {
+          "name": "Design System",
+          "description": "Sistema di design consistente per multiple applicazioni",
+          "usage": "Creato utility classes personalizzate e componenti riutilizzabili",
+          "impact": "Accelerato lo sviluppo UI del 50%"
+        }
+      },
+      "nodejs": {
+        "api": {
+          "name": "Servizio REST API",
+          "description": "Servizio API per gestione utenti e autenticazione",
+          "usage": "Sviluppato endpoints RESTful con Express.js e middleware personalizzati",
+          "impact": "Gestisce 10k+ richieste al minuto con 99.9% uptime"
+        }
+      },
+      "aws": {
+        "scalable": {
+          "name": "App Web Scalabile",
+          "description": "Applicazione web scalabile con architettura serverless",
+          "usage": "Implementato Lambda functions, S3, CloudFront e RDS",
+          "impact": "Ridotto i costi infrastrutturali del 60%"
+        }
+      }
+    }
+  },
+  "cv": {
+    "title": "Esperienza e Competenze",
+    "summary": {
+      "title": "Chi Sono",
+      "content": "Frontend engineer appassionato con oltre 5 anni di esperienza nello sviluppo di applicazioni React scalabili. Mi concentro sulla creazione di soluzioni manutenibili e performanti, promuovendo ambienti di sviluppo sereni e collaborativi. Il mio approccio combina eccellenza tecnica e consegna pragmatica."
+    },
+    "experience": {
+      "title": "Esperienza",
+      "roles": [
+        {
+          "company": "Azienda Tech",
+          "role": "Senior Frontend Engineer",
+          "period": "2022 - Presente",
+          "achievements": [
+            "Ho guidato la migrazione del codebase legacy a Next.js, migliorando le performance del 40%",
+            "Ho formato 3 sviluppatori junior e stabilito best practice per il code review"
+          ]
+        },
+        {
+          "company": "Agenzia Digitale",
+          "role": "Frontend Developer",
+          "period": "2020 - 2022",
+          "achievements": [
+            "Ho sviluppato 15+ applicazioni web responsive usando React e TypeScript",
+            "Ho implementato una strategia di testing completa, raggiungendo il 90% di code coverage"
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "title": "Competenze",
+      "categories": {
+        "frontend": {
+          "title": "Frontend",
+          "items": ["React", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion"]
+        },
+        "performance": {
+          "title": "Performance",
+          "items": ["Core Web Vitals", "Lighthouse", "Analisi Bundle", "Ottimizzazione Immagini"]
+        },
+        "testing": {
+          "title": "Testing",
+          "items": ["Vitest", "Testing Library", "Playwright", "Test Accessibilità"]
+        },
+        "tooling": {
+          "title": "Strumenti",
+          "items": ["Git", "ESLint", "Prettier", "Webpack", "Vite"]
+        },
+        "cloud": {
+          "title": "Cloud",
+          "items": ["Vercel", "AWS", "Docker", "CI/CD", "Monitoring"]
+        }
+      }
+    },
+    "education": {
+      "title": "Formazione e Certificazioni",
+      "items": [
+        "Laurea in Informatica - Nome Università (2019)",
+        "AWS Certified Developer Associate (2023)",
+        "Google Analytics Certified (2022)"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contattami",
+    "description": "Parliamo del tuo prossimo progetto o di una potenziale collaborazione.",
+    "email": "your.name@example.com",
+    "linkedin": "https://www.linkedin.com/in/your-handle",
+    "github": "https://github.com/your-handle",
+    "calendly": "https://calendly.com/your-handle/15min",
+    "labels": {
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "schedule": "Prenota una chiamata"
+    }
+  },
+  "blog": {
+    "title": "Ultimi Articoli",
+    "description": "Riflessioni su sviluppo frontend, performance e creazione di migliori esperienze utente.",
+    "readMore": "Leggi di più",
+    "readingTime": "min di lettura",
+    "backToBlog": "← Torna al Blog",
+    "nextPost": "Successivo →",
+    "prevPost": "← Precedente",
+    "noPostsFound": "Nessun articolo trovato.",
+    "publishedOn": "Pubblicato il"
+  },
+  "footer": {
+    "copyright": "© 2024 Il Tuo Nome. Tutti i diritti riservati.",
+    "builtWith": "Realizzato con Next.js, Tailwind CSS e Contentlayer."
+  },
+  "theme": {
+    "toggle": "Cambia tema",
+    "light": "Chiaro",
+    "dark": "Scuro",
+    "system": "Sistema"
+  },
+  "language": {
+    "toggle": "Cambia lingua",
+    "english": "English",
+    "italian": "Italiano",
+    "spanish": "Español"
+  }
+}

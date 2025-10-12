@@ -1,0 +1,196 @@
+{
+  "navigation": {
+    "home": "Home",
+    "blog": "Blog",
+    "projects": "Projects"
+  },
+  "hero": {
+    "name": "Your Name",
+    "role": "Senior Frontend Engineer (React/TypeScript, Next.js)",
+    "tagline": "I build calm, high-quality front-ends—driven by a love for technology and reliable delivery.",
+    "cta": {
+      "contact": "Contact",
+      "blog": "Blog",
+      "downloadCV": "Download CV (PDF, placeholder)",
+      "downloadCVText": "Download CV"
+    }
+  },
+  "presentation": {
+    "title": "My Presentation Letter",
+    "subtitle": "Who I am and what drives me in my work",
+    "paragraph1": "Hello! I'm a passionate Frontend Engineer with over 5 years of experience creating modern, high-performance web applications. My philosophy is based on the belief that technology should serve people, creating intuitive and accessible digital experiences.",
+    "paragraph2": "Throughout my professional journey, I've had the opportunity to work with diverse teams and challenging projects, always with the goal of writing clean, maintainable, and scalable code. I firmly believe in the importance of collaboration and continuous learning—every day is an opportunity to improve and learn something new.",
+    "paragraph3": "What motivates me most is the ability to transform complex ideas into simple and elegant solutions. I love tackling challenging technical problems and finding the right balance between innovation and pragmatism, always keeping the end user's experience at the center.",
+    "signature": "With passion and dedication,",
+    "role": "Senior Frontend Engineer"
+  },
+  "techStack": {
+    "title": "My Tech Stack",
+    "description": "The technologies and tools I use daily to create exceptional web experiences",
+    "footer": "Always continuously updating and learning new technologies",
+    "hoverInstruction": {
+      "desktop": "Hover over a technology to see projects",
+      "mobile": "Tap a technology to see projects"
+    },
+    "projects": {
+      "react": {
+        "ecommerce": {
+          "name": "E-commerce Platform",
+          "description": "Complete e-commerce platform with cart, payments and order management",
+          "usage": "Used to create reusable components and manage application state",
+          "impact": "Reduced development time by 40% thanks to modular components"
+        },
+        "dashboard": {
+          "name": "Analytics Dashboard",
+          "description": "Dashboard for real-time data visualization and analytics",
+          "usage": "Implemented custom hooks for data management and performance optimization",
+          "impact": "Improved rendering performance by 60%"
+        }
+      },
+      "typescript": {
+        "banking": {
+          "name": "Banking Application",
+          "description": "Banking application with account and transaction management",
+          "usage": "Implemented complete type safety and robust API interfaces",
+          "impact": "Reduced production bugs by 75%"
+        }
+      },
+      "nextjs": {
+        "corporate": {
+          "name": "Corporate Website",
+          "description": "Corporate website with blog and projects section",
+          "usage": "Used SSR and SSG to optimize SEO and performance",
+          "impact": "Improved Core Web Vitals score by 85%"
+        }
+      },
+      "tailwind": {
+        "designSystem": {
+          "name": "Design System",
+          "description": "Consistent design system for multiple applications",
+          "usage": "Created custom utility classes and reusable components",
+          "impact": "Accelerated UI development by 50%"
+        }
+      },
+      "nodejs": {
+        "api": {
+          "name": "REST API Service",
+          "description": "API service for user management and authentication",
+          "usage": "Developed RESTful endpoints with Express.js and custom middleware",
+          "impact": "Handles 10k+ requests per minute with 99.9% uptime"
+        }
+      },
+      "aws": {
+        "scalable": {
+          "name": "Scalable Web App",
+          "description": "Scalable web application with serverless architecture",
+          "usage": "Implemented Lambda functions, S3, CloudFront and RDS",
+          "impact": "Reduced infrastructure costs by 60%"
+        }
+      }
+    }
+  },
+  "cv": {
+    "title": "Experience & Skills",
+    "summary": {
+      "title": "About",
+      "content": "Passionate frontend engineer with 5+ years building scalable React applications. I focus on creating maintainable, performant solutions while fostering calm, collaborative development environments. My approach combines technical excellence with pragmatic delivery."
+    },
+    "experience": {
+      "title": "Experience",
+      "roles": [
+        {
+          "company": "Tech Company",
+          "role": "Senior Frontend Engineer",
+          "period": "2022 - Present",
+          "achievements": [
+            "Led migration of legacy codebase to Next.js, improving performance by 40%",
+            "Mentored 3 junior developers and established code review best practices"
+          ]
+        },
+        {
+          "company": "Digital Agency",
+          "role": "Frontend Developer",
+          "period": "2020 - 2022",
+          "achievements": [
+            "Built 15+ responsive web applications using React and TypeScript",
+            "Implemented comprehensive testing strategy, achieving 90% code coverage"
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "categories": {
+        "frontend": {
+          "title": "Frontend",
+          "items": ["React", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion"]
+        },
+        "performance": {
+          "title": "Performance",
+          "items": ["Core Web Vitals", "Lighthouse", "Bundle Analysis", "Image Optimization"]
+        },
+        "testing": {
+          "title": "Testing",
+          "items": ["Vitest", "Testing Library", "Playwright", "Accessibility Testing"]
+        },
+        "tooling": {
+          "title": "Tooling",
+          "items": ["Git", "ESLint", "Prettier", "Webpack", "Vite"]
+        },
+        "cloud": {
+          "title": "Cloud",
+          "items": ["Vercel", "AWS", "Docker", "CI/CD", "Monitoring"]
+        }
+      }
+    },
+    "education": {
+      "title": "Education & Certifications",
+      "items": [
+        "Computer Science Degree - University Name (2019)",
+        "AWS Certified Developer Associate (2023)",
+        "Google Analytics Certified (2022)"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Let's discuss your next project or potential collaboration.",
+    "email": "your.name@example.com",
+    "linkedin": "https://www.linkedin.com/in/your-handle",
+    "github": "https://github.com/your-handle",
+    "calendly": "https://calendly.com/your-handle/15min",
+    "labels": {
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "schedule": "Schedule a call"
+    }
+  },
+  "blog": {
+    "title": "Latest Writing",
+    "description": "Thoughts on frontend development, performance, and building better user experiences.",
+    "readMore": "Read more",
+    "readingTime": "min read",
+    "backToBlog": "← Back to Blog",
+    "nextPost": "Next →",
+    "prevPost": "← Previous",
+    "noPostsFound": "No posts found.",
+    "publishedOn": "Published on"
+  },
+  "footer": {
+    "copyright": "© 2024 Your Name. All rights reserved.",
+    "builtWith": "Built with Next.js, Tailwind CSS, and Contentlayer."
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "language": {
+    "toggle": "Change language",
+    "english": "English",
+    "italian": "Italiano",
+    "spanish": "Español"
+  }
+}

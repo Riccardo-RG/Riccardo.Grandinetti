@@ -1,0 +1,99 @@
+---
+title: "TypeScript everywhere: safer UI patterns in Next.js"
+date: "2024-01-10"
+summary: "Exploring advanced TypeScript patterns that make your Next.js applications more robust and maintainable."
+tags: ["TypeScript", "Next.js", "Patterns"]
+lang: "en"
+---
+
+# TypeScript everywhere: safer UI patterns in Next.js
+
+TypeScript has become an essential tool for building robust frontend applications. In this post, I'll share some advanced patterns I use to make Next.js applications more type-safe and maintainable.
+
+## The Power of Strict TypeScript
+
+First, let's talk about TypeScript configuration. I always start with strict mode enabled:
+
+```json
+{
+  "compilerOptions": {
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true
+  }
+}
+```
+
+## Pattern 1: Type-Safe API Routes
+
+One of my favorite patterns is creating type-safe API routes:
+
+```typescript
+// types/api.ts
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+}
+
+export interface ApiResponse<T> {
+  data: T;
+  error?: string;
+}
+
+// lib/api.ts
+export async function fetchUser(id: string): Promise<ApiResponse<User>> {
+  const response = await fetch(`/api/users/${id}`);
+  return response.json();
+}
+```
+
+## Pattern 2: Component Props with Variants
+
+Using `class-variance-authority` with TypeScript creates powerful, type-safe component APIs:
+
+```typescript
+import { cva, type VariantProps } from "class-variance-authority";
+
+const buttonVariants = cva("button", {
+  variants: {
+    variant: {
+      primary: "bg-blue-500 text-white",
+      secondary: "bg-gray-200 text-gray-900",
+    },
+    size: {
+      sm: "px-2 py-1 text-sm",
+      lg: "px-4 py-2 text-lg",
+    },
+  },
+});
+
+interface ButtonProps extends VariantProps<typeof buttonVariants> {
+  children: React.ReactNode;
+}
+```
+
+## Pattern 3: Form Handling with Zod
+
+Combining TypeScript with Zod for form validation:
+
+```typescript
+import { z } from "zod";
+
+const userSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Invalid email"),
+  age: z.number().min(18, "Must be 18 or older"),
+});
+
+type UserFormData = z.infer<typeof userSchema>;
+```
+
+## Key Takeaways
+
+1. **Start with strict TypeScript** - It catches more errors at compile time
+2. **Use discriminated unions** - They make impossible states impossible
+3. **Leverage utility types** - `Pick`, `Omit`, and `Partial` are your friends
+4. **Type your API responses** - End-to-end type safety is worth the effort
+
+TypeScript isn't just about catching bugs—it's about creating better developer experiences and more maintainable codebases.
