@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Mail, Github, Linkedin, Calendar, Download } from "lucide-react";
 import { PresentationLetter } from "@/components/presentation-letter";
 import { AnimatedTechStack } from "@/components/animated-tech-stack";
+import { BlogButton } from "@/components/blog-button";
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -39,9 +40,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <Button variant="outline" asChild>
               <Link href="#contact">{t("hero.cta.contact")}</Link>
             </Button>
-            <Button variant="outline" asChild>
-              <Link href={`/${locale}/blog`}>{t("hero.cta.blog")}</Link>
-            </Button>
+            <BlogButton locale={locale} variant="outline">
+              {t("hero.cta.blog")}
+            </BlogButton>
           </div>
         </div>
       </section>
