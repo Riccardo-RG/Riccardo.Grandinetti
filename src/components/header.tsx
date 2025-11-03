@@ -22,7 +22,7 @@ export function Header() {
             className="mr-6 flex items-center space-x-2"
           >
             <span className="hidden font-bold sm:inline-block">
-              Your Name
+              Riccardo Grandinetti
             </span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
@@ -54,7 +54,7 @@ export function Header() {
             href={`/${locale}`}
             className="flex items-center space-x-2"
           >
-            <span className="font-bold">Your Name</span>
+            <span className="font-bold">Riccardo Grandinetti</span>
           </Link>
         </div>
 
@@ -70,7 +70,7 @@ export function Header() {
             <button
               className="md:hidden p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={t("menuToggle")}
             >
               {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>

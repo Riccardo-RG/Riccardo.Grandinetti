@@ -14,7 +14,7 @@ interface SEOProps {
 }
 
 export function generateSEO({
-  title = "Your Name - Senior Frontend Engineer",
+  title = "Riccardo Grandinetti - Senior Frontend Engineer",
   description = "I build calm, high-quality front-ends—driven by a love for technology and reliable delivery.",
   image = "/og-image.png",
   url = "https://yourname.dev",
@@ -25,7 +25,7 @@ export function generateSEO({
   authors,
   tags,
 }: SEOProps = {}): Metadata {
-  const siteName = "Your Name";
+  const siteName = "Riccardo Grandinetti";
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
 
   return {
@@ -72,7 +72,7 @@ export function generatePersonSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Your Name",
+    name: "Riccardo Grandinetti",
     jobTitle: "Senior Frontend Engineer",
     description:
       "I build calm, high-quality front-ends—driven by a love for technology and reliable delivery.",
@@ -99,7 +99,7 @@ export function generateBlogPostSchema({
   publishedTime,
   modifiedTime,
   image,
-  author = "Your Name",
+  author = "Riccardo Grandinetti",
 }: {
   title: string;
   description: string;

@@ -107,7 +107,7 @@ export default async function BlogPostPage({
                   {t("publishedOn")} {formatDate(post.date, locale)}
                 </time>
                 <span>•</span>
-                <span>{readingTime} min read</span>
+                <span>{readingTime} {t("readingTime")}</span>
               </div>
 
               <h1 className="text-4xl font-bold tracking-tight mb-4">

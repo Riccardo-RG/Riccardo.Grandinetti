@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { ReactNode } from "react";
 
@@ -37,6 +37,7 @@ export default async function LocaleLayout({
   params,
 }: LocaleLayoutProps) {
   const { locale } = await params;
+  const tFooter = await getTranslations("footer");
 
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale)) notFound();
@@ -63,10 +64,10 @@ export default async function LocaleLayout({
             <footer className="border-t py-6 md:py-0">
               <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
                 <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-                  © 2024 Your Name. All rights reserved.
+                  {tFooter("copyright")}
                 </p>
                 <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-                  Built with Next.js, Tailwind CSS, and Contentlayer.
+                  {tFooter("builtWith")}
                 </p>
               </div>
             </footer>

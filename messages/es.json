@@ -2,10 +2,11 @@
   "navigation": {
     "home": "Inicio",
     "blog": "Blog",
-    "projects": "Proyectos"
+    "projects": "Proyectos",
+    "menuToggle": "Abrir/cerrar menú"
   },
   "hero": {
-    "name": "Tu Nombre",
+    "name": "Riccardo Grandinetti",
     "role": "Senior Frontend Engineer (React/TypeScript, Next.js)",
     "tagline": "Construyo front-ends fiables y serenos, impulsado por el amor a la tecnología.",
     "cta": {
@@ -15,6 +16,7 @@
       "downloadCVText": "Descargar CV"
     }
   },
+  
   "presentation": {
     "title": "Mi Carta de Presentación",
     "subtitle": "Quién soy y qué me impulsa en mi trabajo",
@@ -87,7 +89,8 @@
           "impact": "Reducido los costos de infraestructura en un 60%"
         }
       }
-    }
+    },
+    "moreProjects": "+{count} más proyectos"
   },
   "cv": {
     "title": "Experiencia y Habilidades",
@@ -178,7 +181,7 @@
     "publishedOn": "Publicado el"
   },
   "footer": {
-    "copyright": "© 2024 Tu Nombre. Todos los derechos reservados.",
+    "copyright": "© 2025 Riccardo Grandinetti. Todos los derechos reservados.",
     "builtWith": "Construido con Next.js, Tailwind CSS y Contentlayer."
   },
   "theme": {

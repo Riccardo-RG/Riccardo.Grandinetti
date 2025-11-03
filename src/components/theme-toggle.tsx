@@ -18,9 +18,9 @@ export function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <Button variant="ghost" size="icon" aria-label="Toggle theme">
+      <Button variant="ghost" size="icon" aria-label={t("toggle")}>
         <Sun className="h-[1.2rem] w-[1.2rem]" />
-        <span className="sr-only">Toggle theme</span>
+        <span className="sr-only">{t("toggle")}</span>
       </Button>
     );
   }

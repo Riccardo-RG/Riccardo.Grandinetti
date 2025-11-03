@@ -20,8 +20,8 @@ export function PresentationLetter() {
         </div>
         
         <Card className="relative overflow-hidden border-2 shadow-lg">
-          <div className="absolute top-4 left-4 text-primary/20">
-            <Quote className="h-8 w-8" />
+            <div className="absolute top-4 left-4">
+            <Quote className="h-8 w-8 text-primary/40 transition-colors hover:text-primary/60" />
           </div>
           <CardContent className="p-8 md:p-12">
             <div className="space-y-6 text-lg leading-relaxed">
@@ -44,8 +44,8 @@ export function PresentationLetter() {
               </div>
             </div>
           </CardContent>
-          <div className="absolute bottom-4 right-4 text-primary/20">
-            <Quote className="h-8 w-8 rotate-180" />
+          <div className="absolute bottom-4 right-4">
+            <Quote className="h-8 w-8 rotate-180 text-primary/40 transition-colors hover:text-primary/60" />
           </div>
         </Card>
       </div>

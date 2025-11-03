@@ -40,12 +40,12 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
             <article key={post.slug} className="group">
               <Link href={post.url}>
                 <div className="rounded-lg border p-6 transition-colors hover:bg-muted/50">
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+          <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                     <time dateTime={post.date}>
                       {formatDate(post.date, locale)}
                     </time>
                     <span>•</span>
-                    <span>{Math.ceil(post.body.raw.split(' ').length / 200)} min read</span>
+            <span>{Math.ceil(post.body.raw.split(' ').length / 200)} {t("readingTime")}</span>
                   </div>
 
                   <h2 className="text-2xl font-semibold mb-3 group-hover:text-primary transition-colors">

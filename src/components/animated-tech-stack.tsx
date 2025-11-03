@@ -318,7 +318,7 @@ export function AnimatedTechStack() {
                     ))}
                     {tech.projects.length > 1 && (
                       <p className="text-xs text-center text-gray-500">
-                        +{tech.projects.length - 1} altri progetti
+                        {t("techStack.moreProjects", { count: tech.projects.length - 1 })}
                       </p>
                     )}
                   </div>
